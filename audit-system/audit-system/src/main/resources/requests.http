@@ -1,0 +1,46 @@
+### Get all patients
+GET http://localhost:8080/api/patients
+
+### Create a patient
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+X-User-Name: dr.smith
+
+{
+  "fullName": "John Doe",
+  "dateOfBirth": "1990-01-01",
+  "diagnosis": "Flu",
+  "assignedDoctor": "Dr. Smith"
+}
+
+### Get all employees
+GET http://localhost:8080/api/employees
+
+### Create an employee
+POST http://localhost:8080/api/employees
+Content-Type: application/json
+X-User-Name: hr.admin
+
+{
+  "fullName": "Priya Nair",
+  "email": "priya.nair@example.com",
+  "jobTitle": "Compliance Officer",
+  "department": "Operations",
+  "hireDate": "2026-02-01"
+}
+
+### Update an employee
+PUT http://localhost:8080/api/employees/1
+Content-Type: application/json
+X-User-Name: hr.admin
+
+{
+  "fullName": "Priya Nair",
+  "email": "priya.nair@example.com",
+  "jobTitle": "Senior Compliance Officer",
+  "department": "Operations",
+  "hireDate": "2026-02-01"
+}
+
+### View audit logs
+GET http://localhost:8080/api/audit-logs
